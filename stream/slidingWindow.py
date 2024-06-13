@@ -81,7 +81,7 @@ class Window:
         c = 2 if self.has_context else 1
         return self.window.iloc[:, -c]
     
-    def get_proportion(self, return_class=1):
+    def get_prevalence(self, return_class=1):
         return self.labels().value_counts(normalize=True)[return_class]
     
     def __getitem__(self, start=None, end=None):
